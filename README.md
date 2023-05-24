@@ -46,7 +46,7 @@ by default Next.js uses SSG
 user.js
 
 ```bash
-const express = require('express);
+const express = require('express');
 const app =  express();
 
 app.get('/api/users', (req, res) => {

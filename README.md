@@ -32,3 +32,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<-- Other information about Next.js-->
+
+Next.js DATA FETCHING =>
+
+1. Server Side Rendering (SSR)
+2. Static Side Generation (SSG)
+3. Incremental Static Generation (ISR)
+
+by default Next.js uses SSG
+
+user.js
+
+```bash
+const express = require('express);
+const app =  express();
+
+app.get('/api/users', (req, res) => {
+    //handle GET request for /api/users
+    const users = [
+        { id: 1, name: 'John' },
+        { id: 2, name: 'Jane' },
+        { id: 3, name: 'Bob' },
+    ];
+
+    //send the users as a response
+    res.json(users);
+});
+
+app.listen(3000, () => {
+    console.log('Server is listening on port 3000');
+});
+
+```

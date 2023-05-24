@@ -33,7 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-<-- Other information about Next.js-->
+## Other information about Next.js
 
 Next.js DATA FETCHING =>
 
@@ -66,3 +66,13 @@ app.listen(3000, () => {
 });
 
 ```
+
+Next.js supports the following HTTP methods:
+
+1. **GET** retrieves data resources from the server
+2. **POST** submits data to the server to create a new resource
+3. **PUT** updates or replaces an existing resource on the server
+4. **PATCH** partially updates an existing resource on the server
+5. **DELETE** removes a specific resource from the server
+6. **HEAD** retrieves the headers of a resource without fetching its body
+7. **OPTIONS** retrives the supported HTTP methods and other communication options for a resource

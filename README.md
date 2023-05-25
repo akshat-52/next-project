@@ -76,3 +76,50 @@ Next.js supports the following HTTP methods:
 5. **DELETE** removes a specific resource from the server
 6. **HEAD** retrieves the headers of a resource without fetching its body
 7. **OPTIONS** retrives the supported HTTP methods and other communication options for a resource
+
+We can define Metadata in two ways:
+
+1. Static Metadata
+
+page.js
+
+```bash
+export const metadata = {
+    title: 'Home',
+};
+
+// output:
+// <head>
+//      <title>Home</title>
+// </head>
+
+export default function Page() {
+    return (
+        <h1>My Normal Next.js Page with Static Metadata</h1>
+    )
+}
+```
+
+2. Dynamic Metadata
+
+page.js
+
+```bash
+export async function generateMetadata({params, searchParams }) {
+    const product = await getProduct(params.id);
+    return {
+         title:  product.title
+        };
+}
+
+// output:
+// <head>
+//      <title>My Unique Product</title>
+// </head>
+
+export default function Page() {
+    return (
+        <h1>My Normal Next.js Page with Dynamic Metadata</h1>
+    )
+}
+```
